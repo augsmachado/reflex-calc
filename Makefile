@@ -8,10 +8,21 @@ venv-activate:
 venv-deactivate:
 	deactivate
 
-# python commands
-py-install:
+# pip commands
+pip-install:
 	pip install --upgrade pip
 	pip install -r requirements.txt --upgrade
 
-py-run-tests:
+pip-freeze:
+	pip freeze > requirements.txt
+
+# pytest commands
+run-tests:
 	pytest tests
+
+# reflex commands
+init-reflex:
+	reflex init
+
+run-reflex:
+	reflex run --loglevel debug
